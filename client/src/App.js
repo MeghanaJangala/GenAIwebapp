@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import "./App.css"; // Import CSS for dark mode styling
+import "./App.css";
 
 // Components for different sections
-const Home = () => <h1>Home Page</h1>;
+const Home = () => (
+  <div className="home-container">
+    <h1 className="home-title">Welcome to Gen AI Medical Diagnosis and Drug Design</h1>
+    <p className="home-subtitle">Get all your predictions and diagnoses with cutting-edge AI technology.</p>
+  </div>
+);
+
 const BrainSegmentation = () => <h1>Brain Segmentation</h1>;
 const LungSegmentation = () => <h1>Lung Segmentation</h1>;
 const ProteinPrediction = () => <h1>Protein Structure Prediction</h1>;
 const DrugDesignTools = () => <h1>Drug Design Tools</h1>;
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true); // Default to dark mode
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
     <Router>
@@ -25,7 +31,6 @@ function App() {
             <li><Link to="/protein">Protein Prediction</Link></li>
             <li><Link to="/drug-design">Drug Design Tools</Link></li>
           </ul>
-          {/* Dark mode toggle */}
           <button className="toggle-btn" onClick={() => setDarkMode(!darkMode)}>
             {darkMode ? "☀️ Light Mode" : "🌙 Dark Mode"}
           </button>
