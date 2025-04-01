@@ -2,13 +2,15 @@
 .dark-mode {
   background-color: #121212;
   color: white;
-  height: 100vh;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
 .light-mode {
   background-color: #ffffff;
   color: black;
-  height: 100vh;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
 }
 
 /* Navbar Styles */
@@ -18,17 +20,23 @@
   align-items: center;
   padding: 1rem 2rem;
   background-color: #1a1a1a;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .logo {
   color: #fff;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .nav-links li {
@@ -53,6 +61,7 @@
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: 0.3s;
+  border-radius: 5px;
 }
 
 .toggle-btn:hover {
@@ -60,22 +69,97 @@
   color: black;
 }
 
-/* Home Page Styling */
+/* Hero Section */
 .home-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
   text-align: center;
+  padding: 5rem 2rem;
+  margin-top: 60px;
 }
 
-.home-title {
+.home-container h1 {
   font-size: 2.5rem;
-  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.home-subtitle {
+.home-container p {
   font-size: 1.2rem;
-  margin-top: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Sections Styling */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.section img {
+  width: 40%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.section-content {
+  max-width: 600px;
+}
+
+.section-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  color: white;
+  margin-top: 2rem;
+}
+
+/* Feature Section */
+.feature-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background-color: white;
+  color: black;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card img {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #555;
 }
